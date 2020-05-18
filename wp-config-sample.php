@@ -72,6 +72,10 @@ define('NONCE_SALT',       '');
  */
 $table_prefix = 'wp_';
 
+// Indique à Wordpress l'url du dossier content
+define( 'WP_CONTENT_URL', 'http://localhost/__mon-url-à-remplacer__/content');
+// Indique à WP le chemin du dossier content (sur le disque dur)
+define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/content' ); 
 /**
  * Pour les développeurs : le mode déboguage de WordPress.
  *

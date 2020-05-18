@@ -1,0 +1,20 @@
+{
+  "files": {
+    "static/js/1.chunk.js": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/js/1.chunk.js",
+    "static/js/1.chunk.js.map": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/js/1.chunk.js.map",
+    "main.css": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/css/main.chunk.css",
+    "main.js": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/js/main.chunk.js",
+    "main.css.map": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/css/main.chunk.css.map",
+    "main.js.map": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/js/main.chunk.js.map",
+    "runtime-main.js": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/js/bundle.js",
+    "runtime-main.js.map": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/js/bundle.js.map",
+    "index.php": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/index.php",
+    "static/media/logo.svg": "/sites-wordpress/recipes-app-bot/content/themes/recipes-react-theme/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/bundle.js",
+    "static/js/1.chunk.js",
+    "static/css/main.chunk.css",
+    "static/js/main.chunk.js"
+  ]
+}
