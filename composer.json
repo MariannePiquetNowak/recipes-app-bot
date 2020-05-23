@@ -8,7 +8,11 @@
     "require": {
         "johnpbloch/wordpress": "^5.4",
         "wpackagist-theme/twentynineteen": "*",
-        "wpackagist-plugin/hello-dolly": "*"
+        "wpackagist-plugin/hello-dolly": "*",
+        "wpackagist-plugin/jwt-authentication-for-wp-rest-api": "^1.2",
+        "wpackagist-plugin/custom-post-type-ui": "^1.7",
+        "wpackagist-plugin/advanced-custom-fields": "^5.8",
+        "wpackagist-plugin/acf-to-rest-api": "^3.2"
 
     }, 
     "extra": {
