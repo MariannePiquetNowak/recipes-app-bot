@@ -4,7 +4,7 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">Recette de Bot</a>
+                {/* <a className="navbar-brand" href="#">Recette de Bot</a>
                 <div className="collapse navbar-collapse" id="navbarColor02">
                     <ul className="navbar-nav mr-auto">
                         <li className="nav-item active">
@@ -20,7 +20,7 @@ class Navbar extends Component {
                             <a className="nav-link" href="#">Concours</a>
                         </li>
                     </ul>   
-                </div> 
+                </div>  */}
             </nav>
         )
     }
