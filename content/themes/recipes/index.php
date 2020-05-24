@@ -18,6 +18,11 @@
   <main>
     <h1>Le contenu de ma page</h1>
   </main>
+  <footer>
+    <div>
+      <h4>Site Recette de Bot créé par Marianne PN</h4>
+    </div>
+  </footer>
 </body>
 </html>
 

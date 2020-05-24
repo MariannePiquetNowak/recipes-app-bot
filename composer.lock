@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "22ad1264cf597ca1ce97d5abb972e895",
+    "content-hash": "15e7587b86244f95abf8629f5a17edc8",
     "packages": [
         {
             "name": "composer/installers",
@@ -360,6 +360,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/"
+        },
+        {
+            "name": "wpackagist-plugin/simply-show-hooks",
+            "version": "1.2.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/simply-show-hooks/",
+                "reference": "tags/1.2.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/simply-show-hooks.1.2.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/simply-show-hooks/"
         },
         {
             "name": "wpackagist-theme/twentynineteen",
