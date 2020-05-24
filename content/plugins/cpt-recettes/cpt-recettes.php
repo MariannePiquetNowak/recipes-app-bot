@@ -16,7 +16,7 @@ class CptRecipes
 {
     public function __constructor() 
     {
-        add_action('init', [$this, 'recipes_register_cpt']);
+        add_action('init', [$this, 'register_cpt_recipes']);
         
     }
 
@@ -36,10 +36,10 @@ class CptRecipes
             "search_items"          => "Rechercher une recette",
             "not_found"             => "Aucune recette trouvée",
             "not_found_in_trash"    => "Aucune recette trouvée dans la corbeille",
-            "featured_media"        => "Image de mise en avant",
-            "set_featured_media"    => "Définir l'image de mise en avant",
-            "remove_featured_image" => "Retirer l'image de mise en avant ",
-            "use_featured_media"    => "Utiliser l'image de mise en avant"
+            "featured_media"        => "Image de la recette",
+            "set_featured_media"    => "Définir l'image de la recette",
+            "remove_featured_image" => "Retirer l'image de la recette",
+            "use_featured_media"    => "Utiliser l'image de la recette"
         ];
 
         $args = [
@@ -58,9 +58,10 @@ class CptRecipes
             ]
         ];
 
+
         register_post_type("recipes", $args);
     }
 }
 
 $cptRecipes = new CptRecipes;
-var_dump($cptRecipes);
+

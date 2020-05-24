@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.4.x - Development - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-05-14 12:06:52+0000\n"
+"PO-Revision-Date: 2020-05-17 12:05:32+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2312,7 +2312,7 @@ msgctxt "requests"
 msgid "All <span class=\"count\">(%s)</span>"
 msgid_plural "All <span class=\"count\">(%s)</span>"
 msgstr[0] "Tous <span class=\"count\">(%s)</span>"
-msgstr[1] "Tous <span class=\"count\">(%d)</span>"
+msgstr[1] "Tous <span class=\"count\">(%s)</span>"
 
 #: wp-admin/menu.php:246
 msgid "Plugin Editor"
@@ -13496,8 +13496,8 @@ msgstr[1] "Les miens <span class=\"count\">(%s)</span>"
 #: wp-admin/edit.php:363
 msgid "%s block not updated, somebody is editing it."
 msgid_plural "%s blocks not updated, somebody is editing them."
-msgstr[0] "Le bloc %s n’a pas été mise à jour : quelqu’un est en train de le modifier."
-msgstr[1] "Les blocs %s n’ont pas été mis à jour : quelqu’un est en train de les modifier."
+msgstr[0] "%s bloc n’a pas été mise à jour : quelqu’un est en train de le modifier."
+msgstr[1] "%s blocs n’ont pas été mis à jour : quelqu’un est en train de les modifier."
 
 #. translators: %s: Number of posts.
 #: wp-admin/edit.php:334

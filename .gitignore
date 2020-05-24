@@ -4,3 +4,5 @@
 /content/plugins/hello-dolly
 wp-config.php
 composer.lock
+/content/upgrade/
+/content/uploads/
