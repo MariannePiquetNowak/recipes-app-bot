@@ -58,3 +58,14 @@ Stack trace:
 #6 /var/www/html/sites-wordpress/recipes-app-bot/index.php(17): require('/var/www/html/s...')
 #7 {main}
   thrown in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/header.php on line 13
+[25-May-2020 18:08:01 UTC] PHP Notice:  map_meta_cap est appelée de la mauvaise manière. Le type de publication recettes n’est pas enregistré. Il n’est donc pas possible de vérifier de manière fiable que la permission « edit_post » correspond à ce type de publication. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 4.4.0.) in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/functions.php on line 5167
+[25-May-2020 18:09:16 UTC] PHP Notice:  map_meta_cap est appelée de la mauvaise manière. Le type de publication recipes n’est pas enregistré. Il n’est donc pas possible de vérifier de manière fiable que la permission « edit_post » correspond à ce type de publication. Veuillez lire <a href="https://fr.wordpress.org/support/article/debugging-in-wordpress/">Débogage dans WordPress</a> (en) pour plus d’informations. (Ce message a été ajouté à la version 4.4.0.) in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/functions.php on line 5167
+[25-May-2020 18:32:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function register_desactivation_hook() in /var/www/html/sites-wordpress/recipes-app-bot/content/plugins/cpt-recettes/cpt-recettes.php:87
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(371): include_once()
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-load.php(42): require_once('/var/www/html/s...')
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-blog-header.php(13): require_once('/var/www/html/s...')
+#4 /var/www/html/sites-wordpress/recipes-app-bot/index.php(17): require('/var/www/html/s...')
+#5 {main}
+  thrown in /var/www/html/sites-wordpress/recipes-app-bot/content/plugins/cpt-recettes/cpt-recettes.php on line 87
