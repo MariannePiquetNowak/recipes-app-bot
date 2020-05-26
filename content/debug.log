@@ -1,1 +1,59 @@
-[25-May-2020 18:57:21 UTC] PHP Parse error:  syntax error, unexpected '}' in /var/www/html/sites-wordpress/recipes-app-bot/content/plugins/cpt-recettes/cpt-recettes.php on line 87
+[26-May-2020 10:33:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php on line 16 and exactly 2 expected in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php:135
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php(16): register_nav_menu(Array)
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(287): recipes_setup('')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(518): do_action('after_setup_the...')
+#5 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#6 /var/www/html/sites-wordpress/recipes-app-bot in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php on line 135
+[26-May-2020 10:35:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php on line 16 and exactly 2 expected in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php:135
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php(16): register_nav_menu(Array)
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(287): recipes_setup('')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(518): do_action('after_setup_the...')
+#5 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#6 /var/www/html/sites-wordpress/recipes-app-bot in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php on line 135
+[26-May-2020 10:35:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php on line 16 and exactly 2 expected in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php:135
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php(16): register_nav_menu(Array)
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(287): recipes_setup('')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(518): do_action('after_setup_the...')
+#5 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#6 /var/www/html/sites-wordpress/recipes-app-bot in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php on line 135
+[26-May-2020 10:35:51 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php on line 16 and exactly 2 expected in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php:135
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php(16): register_nav_menu(Array)
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(287): recipes_setup('')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(518): do_action('after_setup_the...')
+#5 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#6 /var/www/html/sites-wordpress/recipes-app-bot in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php on line 135
+[26-May-2020 10:37:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php on line 16 and exactly 2 expected in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php:135
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php(16): register_nav_menu(Array)
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(287): recipes_setup('')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(518): do_action('after_setup_the...')
+#5 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#6 /var/www/html/sites-wordpress/recipes-app-bot in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php on line 135
+[26-May-2020 10:38:46 UTC] PHP Warning:  require(inc/scripts.php): failed to open stream: No such file or directory in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/functions.php on line 3
+[26-May-2020 10:38:46 UTC] PHP Fatal error:  require(): Failed opening required 'inc/scripts.php' (include_path='.:/usr/share/php') in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/functions.php on line 3
+[26-May-2020 10:38:56 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function register_nav_menu(), 1 passed in /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php on line 16 and exactly 2 expected in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php:135
+Stack trace:
+#0 /var/www/html/sites-wordpress/recipes-app-bot/content/themes/recipes/inc/theme-setup.php(16): register_nav_menu(Array)
+#1 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(287): recipes_setup('')
+#2 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-settings.php(518): do_action('after_setup_the...')
+#5 /var/www/html/sites-wordpress/recipes-app-bot/wp-config.php(143): require_once('/var/www/html/s...')
+#6 /var/www/html/sites-wordpress/recipes-app-bot in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/nav-menu.php on line 135
+[26-May-2020 13:01:34 UTC] PHP Warning:  Une erreur imprévue est survenue. Il pourrait y avoir un problème avec WordPress.org ou la configuration de ce serveur. Si vous continuez à rencontrer ce problème, veuillez vous rendre sur les <a href="https://wordpress.org/support/forums/">forums de support</a>. (WordPress n’a pas pu établir de connexion sécurisée vers WordPress.org. Veuillez contacter l’administrateur de votre serveur.) in /var/www/html/sites-wordpress/recipes-app-bot/wp/wp-includes/update.php on line 388
+[26-May-2020 14:04:23 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/sites-wordpress/recipes-app-bot/content/plugins/recettes-de-bot.php/inc/recipe_cpt.php on line 117
+[26-May-2020 14:05:11 UTC] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /var/www/html/sites-wordpress/recipes-app-bot/content/plugins/recettes-de-bot.php/inc/recipe_cpt.php on line 117

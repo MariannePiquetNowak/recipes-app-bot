@@ -9,7 +9,8 @@
         "johnpbloch/wordpress": "^5.4",
         "wpackagist-theme/twentynineteen": "*",
         "wpackagist-plugin/hello-dolly": "*",
-        "wpackagist-plugin/simply-show-hooks": "^1.2"
+        "wpackagist-plugin/simply-show-hooks": "^1.2",
+        "wpackagist-plugin/what-the-file": "^1.5"
 
     }, 
     "extra": {
