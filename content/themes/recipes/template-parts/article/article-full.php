@@ -15,12 +15,14 @@
         <li><strong>Préparation</strong> : <?= get_preparation(get_the_ID()); ?></li> 
         <li><strong>Cuisson</strong> : <?= get_cuisson(get_the_ID()); ?></li> 
     </ul>
-    <aside>
+    <div class='ingredient-list'>
     <h3>Ingrédients</h3>
-    <ul>
-        <?= get_recipe_ingredients(get_the_ID()); ?>
-    </ul>
-    </aside>
+        <ul>
+            <li>
+                <?= get_recipe_ingredients(get_the_ID()); ?>
+            </li>
+        </ul>
+    </class=>
     <div>
         <strong>Visible dans : </strong>
         <?= get_recipe_types(get_the_ID()); ?>
