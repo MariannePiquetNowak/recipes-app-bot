@@ -30,7 +30,7 @@ function get_recipe_ingredients($post_id)
 {
     $html = '';
 
-    $array_ingredients = wp_get_post_terms($post_id, "ingredients");
+    $array_ingredients = wp_get_post_terms($post_id, "ingredient");
    // Wp_get_post_terms : méthode qui récupère les taxonomies d'un contenu
 //    print_r($array_ingredients);
 
@@ -38,7 +38,9 @@ function get_recipe_ingredients($post_id)
     foreach ($array_ingredients as $wp_term) 
     {
 
-        $html .= '<li class="tag ingredient">'.ucfirst($wp_term->name).'</li>';
+        $html .= '<a href="'.get_term_link($wp_term).'">';
+        $html .= ucfirst($wp_term->name);
+        $html .= '</a> ';
 
     }
 
@@ -50,7 +52,7 @@ function get_recipe_types($post_id)
 {
     $html = '';
 
-    $array_type = wp_get_post_terms($post_id, "types");
+    $array_type = wp_get_post_terms($post_id, "type");
    // Wp_get_post_terms : méthode qui récupère les taxonomies d'un contenu
 //    print_r($array_type);
 

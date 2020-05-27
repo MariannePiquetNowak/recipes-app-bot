@@ -10,7 +10,7 @@
 
             $args = [
                 'post_type' => 'recettes', // Cpt recettes
-                'posts_per_page' => 6
+                'posts_per_page' => 1
             ];
 
             $wp_query = new WP_Query($args);

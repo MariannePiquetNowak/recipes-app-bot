@@ -1,6 +1,6 @@
 <!--
     ====================================================== 
-    ======== Articles présents sur la front-page =========
+    ====== Articles présents sur l'url de la recette =====
     ====================================================== 
 -->
 
@@ -9,7 +9,7 @@
     <div class='recipes-img'>
         <?php the_post_thumbnail(); ?>
     </div>
-    <p><strong>En résumé : </strong><?php the_excerpt(); ?></p>
+    <p><?php the_content(); ?></p>
     <ul>
         <li><strong>Créateur</strong> : <?= get_creator(get_the_ID()); ?></li> 
         <li><strong>Préparation</strong> : <?= get_preparation(get_the_ID()); ?></li> 
@@ -25,5 +25,4 @@
         <strong>Visible dans : </strong>
         <?= get_recipe_types(get_the_ID()); ?>
     </div>
-    <a href="<?php the_permalink(); ?>">Lire la recette</a>
 </article>

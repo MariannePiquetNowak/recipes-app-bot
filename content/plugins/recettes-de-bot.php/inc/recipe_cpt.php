@@ -78,36 +78,37 @@ class Recipes_Cpt
     public function create_taxonomies() 
     {
         // Création d'une taxonomie ingrédients
-        $labels = [
-            "name"                          => "Ingrédients",
-            "singular_name"                 => "Ingrédient",
+        $labels =  [ 
+            'name'                          => 'Ingrédients',
+            'singular_name'                 => 'Ingrédient',
             "menu_name"                     => "Ingrédients",
             'all_items'                     => 'Toutes les ingrédients',
             "add_new_item"                  => "Ajouter un nouvel ingrédient",
             "new_item_name"                 => "Nouvel ingrédient",
-            "edit_item"                     => "Editer l'ingrédient",
-            'update_item'                   => "Mettre à jour l'ingrédient",
-            "view_item"                     => "Voir l'ingrédient", 
+            "edit_item"                     => "Editer les ingrédients",
+            'update_item'                   => "Mettre à jour les ingrédients",
+            "view_item"                     => "Voir les ingrédients", 
             'separate_items_with_commas'    => "Séparer les ingrédients avec une virgule",
             "add_or_remove_items"           => "Ajouter ou supprimer un ingrédient",
             "choose_from_most_used"         => "Choisir parmis les ingrédients les plus utilisés",
             "popular_items"                 => "Ingrédients populaires",
-            "all_items"                     => "Voir toutes les ingrédients",
+            "all_items"                     => "Voir tous les ingrédients",
             "search_items"                  => "Rechercher un ingrédient",
             "not_found"                     => "Aucun ingrédient trouvé",
             "items_list"                    => "Liste des ingrédients",
-            
         ];
 
         $args = [
-            'labels'        => $labels,
-            "hierarchical"  => false,
-            "public"        => true, 
+            'labels'                => $labels,
+            "hierarchical"          => false,
+            "public"                => true, 
+            'show_in_ui'            => true, 
+            'show_in-rest'          => true, 
 
         ];
 
         // nom de la taxo, lié au cpt, on lui donne nos arguments
-        register_taxonomy('ingredients', 'recettes', $args);
+        register_taxonomy('ingredient', 'recettes', $args);
 
     // =============================================================== \\
 
@@ -121,7 +122,7 @@ class Recipes_Cpt
             "new_item_name"                 => "Nouveau type de recette",
             "edit_item"                     => "Editer le type de la recette",
             'update_item'                   => "Mettre à jour le type de la recette",
-            "view_item"                     => "Voir la recette", 
+            "view_item"                     => "Voir le type de la recette", 
             'separate_items_with_commas'    => "Séparer les types de recettes avec une virgule",
             "add_or_remove_items"           => "Ajouter ou supprimer un type de recette",
             "choose_from_most_used"         => "Choisir parmis les types de recettes les plus utilisés",
@@ -133,12 +134,14 @@ class Recipes_Cpt
         ];
 
         $args = [
-            'labels' => $labels,
-            'public' => true,
-            'hierarchical' => true, 
+            'labels'                => $labels,
+            'public'                => true,
+            'hierarchical'          => true, 
+            'show_in_ui'            => true, 
+            'show_in-rest'          => true, 
         ];
      
-        register_taxonomy('types', "recettes", $args);
+        register_taxonomy('type', "recettes", $args);
             
     // =============================================================== \\
 
@@ -165,9 +168,10 @@ class Recipes_Cpt
         ];
 
         $args = [
-            'labels' => $labels,
-            'public' => true,
-            'hierarchical' => false
+            'labels'            => $labels,
+            'public'            => true,
+            'hierarchical'      => false,
+            
         ];
 
         register_taxonomy('concours', "recettes", $args);
