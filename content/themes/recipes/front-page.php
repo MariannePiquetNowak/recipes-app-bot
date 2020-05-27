@@ -1,30 +1,30 @@
-
 <!-- HEADER -->
 <?php get_header(); ?>
 
 
     <!-- MAIN -->
-<section style="color: black">
+    <main class="main">
 
-<!-- Affiche mes recettes sur la front-page -->
-    <?php 
+        <!-- Affiche mes recettes sur la front-page -->
+            <?php 
 
-    $args = [
-        'post_type' => 'recettes'
-    ];
+            $args = [
+                'post_type' => 'recettes', // Cpt recettes
+                'posts_per_page' => 6
+            ];
 
-    $wp_query = new WP_Query($args);
+            $wp_query = new WP_Query($args);
 
-    if($wp_query->have_posts()): while($wp_query->have_posts()): $wp_query->the_post();
+            if($wp_query->have_posts()): while($wp_query->have_posts()): $wp_query->the_post();
 
-        get_template_part('template-parts/recettes');
+                get_template_part('template-parts/article/article', 'excerpt'); // Charge article-excerpt.php
 
-endwhile; endif;
+        endwhile; endif;
 
-wp_reset_postdata();
-?>
-</section>
+        wp_reset_postdata();
+        ?>
 
+</main>
     <!-- FOOTER -->
    
 <?php get_footer(); ?>

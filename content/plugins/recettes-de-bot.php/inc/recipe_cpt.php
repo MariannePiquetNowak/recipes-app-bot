@@ -50,7 +50,6 @@ class Recipes_Cpt
             "supports"              => [
                 "title",
                 "editor",
-                "author",
                 "thumbnail",
                 "excerpt",
                 "custom-fields",
@@ -108,7 +107,7 @@ class Recipes_Cpt
         ];
 
         // nom de la taxo, lié au cpt, on lui donne nos arguments
-        register_taxonomy('ingrédients', 'recettes', $args);
+        register_taxonomy('ingredients', 'recettes', $args);
 
     // =============================================================== \\
 

@@ -1,7 +1,7 @@
 
     <footer class="footer">
         <div>
-          <h4>Site Recette de Bot créé par Marianne PN</h4>
+          <h4>Site Recette de Bot créé par <?php the_author(); ?></h4>
         </div>
       </footer>
     </div>
