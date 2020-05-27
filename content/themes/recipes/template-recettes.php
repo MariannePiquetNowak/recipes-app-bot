@@ -1,6 +1,8 @@
 <?php
 /*
 Template Name: Page des recettes
+
+Pour la définir, dans le BO, Pages > Page concernée (ici, Recettes) > Attributs de page > Modèle > le nom du template (ici: Page des recettes)
 */
 ?>
 
@@ -10,7 +12,7 @@ Template Name: Page des recettes
     <?php
 
     $args = [
-        'post_type' => 'recettes', // Cpt recettes
+        'post_type' => 'recettes', // Custom Post Type (ici, recettes)
     ];
 
     $wp_query = new WP_Query($args);
