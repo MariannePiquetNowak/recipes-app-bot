@@ -11,8 +11,8 @@ Template Name: Page Au Hasard
 
     $args = [
         'post_type'     => 'recettes', // Custom Post Type (ici, recettes)
-        'post_per_page' => 1,
-        'orderby'       => 'rand'
+        'posts_per_page' => 1,
+        'orderby'       => 'rand' // Random
     ];
 
     $wp_query = new WP_Query($args);
