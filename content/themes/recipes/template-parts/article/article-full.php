@@ -9,7 +9,6 @@
     <div class='recipes-img'>
         <?php the_post_thumbnail(); ?>
     </div>
-    <p><?php the_content(); ?></p>
     <ul>
         <li><strong>Créateur</strong> : <?= get_creator(get_the_ID()); ?></li> 
         <li><strong>Préparation</strong> : <?= get_preparation(get_the_ID()); ?></li> 
@@ -22,7 +21,7 @@
                 <?= get_recipe_ingredients(get_the_ID()); ?>
             </li>
         </ul>
-    </class=>
+    <p><?php the_content(); ?></p>
     <div>
         <strong>Visible dans : </strong>
         <?= get_recipe_types(get_the_ID()); ?>

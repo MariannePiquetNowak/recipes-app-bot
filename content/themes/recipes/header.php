@@ -11,5 +11,10 @@
   <body <?php body_class(); ?>>
   <div class="wrapper">
       <header class="header">
-        <?php get_template_part('template-parts/navbar-header'); ?>
+        <div class="navbar">
+          <a href="<?= home_url(); ?>"><strong><?php bloginfo('name'); ?></strong></a>
+
+          <?php get_template_part('template-parts/navbar/navbar', 'header'); ?>
+          
+        </div>
       </header>

@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Page des recettes
+Template Name: Page du CPT recettes
 
 Pour la définir, dans le BO, Pages > Page concernée (ici, Recettes) > Attributs de page > Modèle > le nom du template (ici: Page des recettes)
 */
@@ -23,7 +23,6 @@ Pour la définir, dans le BO, Pages > Page concernée (ici, Recettes) > Attribut
 
     endwhile; endif;
 
-    wp_reset_postdata();
     ?>
 
 </main>
