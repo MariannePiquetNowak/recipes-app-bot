@@ -2,7 +2,7 @@
 /*
     ====================================================== 
     ===== Affiche l'article de la recette en question ====
-    ATTENTION : toujours nommé le template single-$cpt.php // 
+    ATTENTION : toujours nommé le template single-$cpt.php 
             bien marquer le nom complet du cpt
     ====================================================== 
 */

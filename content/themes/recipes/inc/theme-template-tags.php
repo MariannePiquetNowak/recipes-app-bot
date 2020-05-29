@@ -67,3 +67,28 @@ function get_recipe_types($post_id)
     }
     return $html;
 }
+
+// Affiche la liste des catégories parents (ex : Plats, Entrées, Desserts)
+
+function get_types_list()
+{
+
+    $html = ''; 
+
+    $list = get_terms([
+        'taxonomy'      => 'type',
+        'parent'        => 0, 
+        'hide_empty'    => false // On veut TOUS les types parents, même ceux qui n'ont pas de contenus associés
+    ]);
+
+        
+    foreach ($list as $wp_term) 
+    {
+
+        $html .= '<a href="'.get_term_link($wp_term).'">';
+        $html .= ucfirst($wp_term->name);
+        $html .= '</a> ';
+
+    }
+    return $html;
+}

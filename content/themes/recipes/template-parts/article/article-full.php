@@ -24,6 +24,13 @@
     <p><?php the_content(); ?></p>
     <div>
         <strong>Visible dans : </strong>
-        <?= get_recipe_types(get_the_ID()); ?>
+        <?= get_recipe_types(get_the_ID()); // Voir dans /inc/theme-template-tags.php ?>
     </div>
+
+    <!-- Fonction qui me permet de repasser sur le BO pour éditer la recette si je suis connectée-->
+    <?php if (current_user_can('edit_recettes')) : ?>
+
+        <a href="<?= admin_url('post.php?post='.get_the_ID().'&action=edit' ); ?>">Editer la recette</a>
+
+    <?php endif; ?>
 </article>
