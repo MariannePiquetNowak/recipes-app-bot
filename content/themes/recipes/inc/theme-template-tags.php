@@ -48,16 +48,16 @@ function get_recipe_ingredients($post_id)
 }
 
 // Ses types
-function get_recipe_types($post_id)
+function get_recipe_styles($post_id)
 {
     $html = '';
 
-    $array_type = wp_get_post_terms($post_id, "type");
+    $array_style = wp_get_post_terms($post_id, "style");
    // Wp_get_post_terms : méthode qui récupère les taxonomies d'un contenu
-//    print_r($array_type);
+   // print_r($array_style);
 
 
-    foreach ($array_type as $wp_term) 
+    foreach ($array_style as $wp_term) 
     {
 
         $html .= '<a href="'.get_term_link($wp_term).'">';
@@ -70,15 +70,15 @@ function get_recipe_types($post_id)
 
 // Affiche la liste des catégories parents (ex : Plats, Entrées, Desserts)
 
-function get_types_list()
+function get_styles_list()
 {
 
     $html = ''; 
 
     $list = get_terms([
-        'taxonomy'      => 'type',
+        'taxonomy'      => 'style',
         'parent'        => 0, 
-        'hide_empty'    => false // On veut TOUS les types parents, même ceux qui n'ont pas de contenus associés
+        'hide_empty'    => false // On veut TOUS les styles parents, même ceux qui n'ont pas de contenus associés
     ]);
 
         

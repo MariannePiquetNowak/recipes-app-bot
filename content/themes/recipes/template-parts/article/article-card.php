@@ -17,7 +17,7 @@
     </div>
     <div style="margin-bottom: 1em">
         <strong>Visible dans : </strong>
-        <?= get_recipe_types(get_the_ID()); ?>
+        <?= get_recipe_styles(get_the_ID()); ?>
     </div>
     <a href="<?php the_permalink(); ?>">Lire la recette</a>
 </article>

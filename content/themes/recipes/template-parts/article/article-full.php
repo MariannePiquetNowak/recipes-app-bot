@@ -24,7 +24,7 @@
     <p><?php the_content(); ?></p>
     <div>
         <strong>Visible dans : </strong>
-        <?= get_recipe_types(get_the_ID()); // Voir dans /inc/theme-template-tags.php ?>
+        <?= get_recipe_styles(get_the_ID()); // Voir dans /inc/theme-template-tags.php ?>
     </div>
 
     <!-- Fonction qui me permet de repasser sur le BO pour éditer la recette si je suis connectée-->

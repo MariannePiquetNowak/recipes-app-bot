@@ -2,7 +2,7 @@
     <footer class="footer" style="margin-top: 2em">
       <div class="sidebar">
         <strong>Types de recettes :</strong>
-        <?= get_types_list(); ?>
+        <?= get_styles_list(); ?>
       </div>
         <div>
           <h4>Site Recette de Bot créé par <?php the_author(); ?></h4>
