@@ -76,7 +76,8 @@ class Recipes_Cpt
             ],
                 
             'show_in_ui'            => true, 
-            'show_in-rest'          => true, 
+            'show_in_rest'          => true, 
+            'rest_base'             => 'recettes'
         ];
 
 
@@ -114,7 +115,7 @@ class Recipes_Cpt
             "hierarchical"          => false,
             "public"                => true, 
             'show_in_ui'            => true, 
-            'show_in-rest'          => true, 
+            'show_in_rest'          => true, 
             'capabilities'          => [
                 'manage_terms'  => 'edit_recettes_taxo',
                 'edit_terms'    => 'edit_recettes_taxo',
@@ -153,7 +154,6 @@ class Recipes_Cpt
             'labels'            => $labels,
             'hierarchical'      => true,
             'public'            => true,
-            'show_in_rest'      => true,
             'capabilities'          => [
                 'manage_terms'  => 'edit_recettes_taxo',
                 'edit_terms'    => 'edit_recettes_taxo',

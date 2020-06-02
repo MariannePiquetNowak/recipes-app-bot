@@ -19,6 +19,9 @@ require plugin_dir_path(__FILE__) . 'inc/recipe_cpt.php';
 // 2) La création des rôles pour accéder au dashboard
 require plugin_dir_path(__FILE__) . 'inc/role.php';
 
+// 3) Rest API
+require plugin_dir_path(__FILE__) . 'inc/rest-api.php';
+
 
 // CPT RECETTES + TAXO 
 $recipes_cpt = new Recipes_Cpt();
@@ -35,3 +38,7 @@ $recipesRole = new RecipesRole();
 
 register_activation_hook(__FILE__, [$recipesRole, 'role_activate']);
 register_deactivation_hook(__FILE__, [$recipesRole, 'role_deactivate']); 
+
+
+/// REST API 
+$recipesApi = new RecipesApi();
