@@ -7,7 +7,7 @@ class RecipesApi
     public function __construct()
     {
         add_action('rest_api_init', [$this, 'authorField']);
-        add_action('rest_api_init', [$this, 'ingredientField']);
+    //    add_action('rest_api_init', [$this, 'ingredientField']);
 
     }
 
@@ -80,25 +80,25 @@ class RecipesApi
     }
 
 
-    public function ingredientField()
-    {
-        register_rest_field(
-            ['recettes'],
-            'ingredient',
-            [
-                'get_callback'  => [$this, 'get_ingedient_name'],
-                'get_update'    => null,
-                'supports'      => null
-            ]
-        );
-    }
+    // public function ingredientField()
+    // {
+    //     register_rest_field(
+    //         ['recettes'],
+    //         'ingredient',
+    //         [
+    //             'get_callback'  => [$this, 'get_ingedient_details'],
+    //             'get_update'    => null,
+    //             'supports'      => null
+    //         ]
+    //     );
+    // }
 
-    public function get_ingedient_name($object, $field_name, $request)
-    {
-        return [
-           // "id"    => $object['ingredient'],
-            "details"  => get_terms("ingredient", $object['ingredient'])
-        ];
-    }
+    // public function get_ingedient_details($object, $field_name, $request)
+    // {
+    //     return [
+    //        // "id"    => $object['ingredient'],
+    //         "details"  => get_terms("ingredient", $object['ingredient'])
+    //     ];
+    // }
 
 }

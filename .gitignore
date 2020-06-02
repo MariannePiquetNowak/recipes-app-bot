@@ -6,3 +6,4 @@ wp-config.php
 composer.lock
 /content/upgrade/
 /content/uploads/
+/content/debug.log

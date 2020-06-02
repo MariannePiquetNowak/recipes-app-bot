@@ -41,4 +41,4 @@ register_deactivation_hook(__FILE__, [$recipesRole, 'role_deactivate']);
 
 
 /// REST API 
-$recipesApi = new RecipesApi();
+// $recipesApi = new RecipesApi();

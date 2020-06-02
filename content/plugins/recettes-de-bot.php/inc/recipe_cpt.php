@@ -130,40 +130,35 @@ class Recipes_Cpt
     // =============================================================== \\
 
         // Création d'une taxo Type pour relié les recettes par catégories de recettes
-        $labels = [
-            'name'                       => 'Types',
-            'singular_name'              => 'Type',
-            'menu_name'                  => 'Types',
-            'all_items'                  => 'Tous les types',
-            'new_item_name'              => 'Nouveau type',
-            'add_new_item'               => 'Ajouter un type',
-            'update_item'                => 'Mettre à jour un type',
-            'edit_item'                  => 'Editer un type',
-            'view_item'                  => 'Voir tous les types',
-            'separate_items_with_commas' => 'Séparer les type avec une virgule',
-            'add_or_remove_items'        => 'Ajouter une supprimer un type',
-            'choose_from_most_used'      => 'Choisir parmis les types les plus utilisés',
-            'popular_items'              => 'Types populaires',
-            'search_items'               => 'Rechercher un type',
-            'not_found'                  => 'Aucun type trouvé',
-            'items_list'                 => 'Lister les types',
-            'items_list_navigation'      => 'Lister les types',
+        $labels =  [ 
+            'name'                          => 'Types',
+            'singular_name'                 => 'Type',
+            "menu_name"                     => "Types",
+            'all_items'                     => 'Toutes les types de recettes',
+            "add_new_item"                  => "Ajouter un nouveau type de recette",
+            "new_item_name"                 => "Nouveau type de recette",
+            "edit_item"                     => "Editer le type de la recette",
+            'update_item'                   => "Mettre à jour le type de la recette",
+            "view_item"                     => "Voir la recette", 
+            'separate_items_with_commas'    => "Séparer les types de recettes avec une virgule",
+            "add_or_remove_items"           => "Ajouter ou supprimer un type de recette",
+            "choose_from_most_used"         => "Choisir parmis les types de recettes les plus utilisés",
+            "popular_items"                 => "Types de recettes populaires",
+            "all_items"                     => "Voir tous les types de recettes",
+            "search_items"                  => "Rechercher un type recette",
+            "not_found"                     => "Aucun type de recette trouvé",
+            "items_list"                    => "Liste des types de recettes",
         ];
 
         $args = [
-            'labels'            => $labels,
-            'hierarchical'      => true,
-            'public'            => true,
-            // 'show_in_rest'      => true,
-            'capabilities' => [
-                'manage_terms'  => 'edit_recipe_taxo',
-                'edit_terms'    => 'edit_recipe_taxo',
-                'delete_terms'  => 'edit_recipe_taxo',
-                'assign_terms'  => 'edit_recipe_taxo',
-            ]
+            'labels' => $labels,
+            'public' => true,
+            'hierarchical' => true, 
+            'show_in_ui'   => true, 
+
         ];
 
-        register_taxonomy('type', 'recette', $args);
+        register_taxonomy('type', "recettes", $args);
         
             
     // =============================================================== \\
