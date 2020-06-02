@@ -154,15 +154,16 @@ class Recipes_Cpt
             'labels'            => $labels,
             'hierarchical'      => true,
             'public'            => true,
-            'capabilities'          => [
-                'manage_terms'  => 'edit_recettes_taxo',
-                'edit_terms'    => 'edit_recettes_taxo',
-                'delete_terms'  => 'edit_recettes_taxo',
-                'assign_terms'  => 'edit_recettes_taxo',
-            ],
+            // 'show_in_rest'      => true,
+            'capabilities' => [
+                'manage_terms'  => 'edit_recipe_taxo',
+                'edit_terms'    => 'edit_recipe_taxo',
+                'delete_terms'  => 'edit_recipe_taxo',
+                'assign_terms'  => 'edit_recipe_taxo',
+            ]
         ];
-     
-        register_taxonomy('type', "recettes", $args);
+
+        register_taxonomy('type', 'recette', $args);
         
             
     // =============================================================== \\

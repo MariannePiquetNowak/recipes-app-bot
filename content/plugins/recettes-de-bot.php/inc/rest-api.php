@@ -7,6 +7,8 @@ class RecipesApi
     public function __construct()
     {
         add_action('rest_api_init', [$this, 'authorField']);
+        add_action('rest_api_init', [$this, 'ingredientField']);
+
     }
 
     // ============= EXEMPLE SIMPLE ===============
@@ -74,6 +76,28 @@ class RecipesApi
         return [
             "id" => $object["author"], 
             "name" => get_the_author_meta("nickname", $object["author"]) // Récupère le psuedonyme + id dynamiquement
+        ];
+    }
+
+
+    public function ingredientField()
+    {
+        register_rest_field(
+            ['recettes'],
+            'ingredient',
+            [
+                'get_callback'  => [$this, 'get_ingedient_name'],
+                'get_update'    => null,
+                'supports'      => null
+            ]
+        );
+    }
+
+    public function get_ingedient_name($object, $field_name, $request)
+    {
+        return [
+           // "id"    => $object['ingredient'],
+            "details"  => get_terms("ingredient", $object['ingredient'])
         ];
     }
 
