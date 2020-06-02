@@ -7,7 +7,11 @@ class RecipesApi
     public function __construct()
     {
         add_action('rest_api_init', [$this, 'authorField']);
-    //    add_action('rest_api_init', [$this, 'ingredientField']);
+        add_action('rest_api_init', [$this, 'metaField']);
+        add_action('rest_api_init', [$this, 'thumbnailField']);
+       add_action('rest_api_init', [$this, 'ingredientField']);
+       add_action('rest_api_init', [$this, 'styleField']);
+
 
     }
 
@@ -79,26 +83,143 @@ class RecipesApi
         ];
     }
 
+    // ================== récupérer les ingrédients =============== \\
 
-    // public function ingredientField()
-    // {
-    //     register_rest_field(
-    //         ['recettes'],
-    //         'ingredient',
-    //         [
-    //             'get_callback'  => [$this, 'get_ingedient_details'],
-    //             'get_update'    => null,
-    //             'supports'      => null
-    //         ]
-    //     );
-    // }
 
-    // public function get_ingedient_details($object, $field_name, $request)
-    // {
-    //     return [
-    //        // "id"    => $object['ingredient'],
-    //         "details"  => get_terms("ingredient", $object['ingredient'])
-    //     ];
-    // }
+    public function ingredientField()
+    {
+        register_rest_field(
+            'recettes',
+            'ingredient',
+            [
+                'get_callback'  => [$this, 'get_ingredient_details'],
+                'get_update'    => null,
+                'supports'      => null
+            ]
+        );
+    }
+
+    public function get_ingredient_details($object, $field_name, $request)
+    {
+
+        $array_return = [];
+
+        foreach ($object[$field_name] as $term_id) {
+
+            $wp_term = get_term($term_id, $field_name);
+
+            $array_return[] = [
+                'id'            => $term_id,
+                'name'          => $wp_term->name,
+                'description'   => $wp_term->description,
+                'slug'          => $wp_term->slug
+            ];
+        }
+
+        return $array_return;
+        
+    }
+
+    // ================== récupérer les styles de recettes =============== \\
+
+        public function styleField()
+        {
+            register_rest_field(
+                'recettes',
+                'style',
+                [
+                    'get_callback'  => [$this, 'get_style_details'],
+                    'get_update'    => null,
+                    'supports'      => null
+                ]
+            );
+        }
+    
+        public function get_style_details($object, $field_name, $request)
+        {
+    
+            $array_return = [];
+    
+            foreach ($object[$field_name] as $term_id) {
+    
+                $wp_term = get_term($term_id, $field_name);
+    
+                $array_return[] = [
+                    'id'            => $term_id,
+                    'name'          => $wp_term->name,
+                    'description'   => $wp_term->description,
+                    'slug'          => $wp_term->slug
+                ];
+            }
+    
+            return $array_return;
+            
+        }
+
+    // ================== récupérer les méta information =============== \\
+
+    public function metaField()
+    {
+       register_rest_field(
+            'recettes',
+            'meta',
+            [
+                'get_callback'  => [$this, 'getMetaCf'],
+                'get_update'    => null,
+                'schema'      => null
+            ]
+        );
+    }
+
+    public function getMetaCf($object, $field_name, $request)
+    {
+        // Récupère toutes les méta du post
+       $all_meta = get_post_meta($object['id']);
+
+       $array_return = [];
+
+       foreach ($all_meta as $meta_name => $meta_value) {
+           if (substr($meta_name, 0, 1) !== '_') {
+               $array_return[$meta_name] = $meta_value;
+           }
+       }
+
+       return $array_return; // Retourne les meta informations sans '_' au début
+    }
+
+    // ================== récupérer les images des posts recettes =============== \\
+
+    public function thumbnailField()
+    {
+        register_rest_field(
+            'recettes',
+            'thumbnail',
+            [
+                'get_callback'  => [$this, 'getThumbnail'],
+                'get_update'    => null,
+                'schema'      => null
+            ]
+        );
+    }
+
+    public function getThumbnail($object, $field_name, $request)
+    {
+
+        // Si je veux seulement l'url de l'image 
+        // return get_the_post_thumbnail_url($object['id]);
+
+        // Si je veux plus de détails, à savoir l'url, la largueur et la hauteur
+        if (has_post_thumbnail($object['id'])) {
+            $thumbnail_details = wp_get_attachment_image_src($object['featured_media']); // On récupère la clé "featured_media" 
+
+            return [
+                "url"       => $thumbnail_details[0],
+                "width"     => $thumbnail_details[1],
+                "height"    => $thumbnail_details[2],
+            ];
+        } else {
+            return false;
+        }
+    }
 
 }

@@ -76,7 +76,7 @@ class Recipes_Cpt
             ],
                 
             'show_in_ui'            => true, 
-            // 'show_in_rest'          => true, // A mettre en commentaire car impossible d'éditer les taxo sinon
+            'show_in_rest'          => true, /* /!\ A mettre en commentaire car impossible d'éditer les taxo dans le BO sinon */
             // 'rest_base'             => 'recettes'
         ];
 
