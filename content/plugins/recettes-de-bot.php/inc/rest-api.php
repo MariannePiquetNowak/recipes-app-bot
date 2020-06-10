@@ -206,20 +206,40 @@ class RecipesApi
     {
 
         // Si je veux seulement l'url de l'image 
-        // return get_the_post_thumbnail_url($object['id]);
+
+        // if(has_post_thumbnail($object['id'])) {
+
+        //     $thumbnail_details = get_the_post_thumbnail_url($object['id']);
+            
+        //     var_dump($thumbnail_details);
+        //     die();
+        //     return [
+        //         "url"       => $thumbnail_details
+        //     ]
+        // } else {
+        //     return false; 
+        // }
 
         // Si je veux plus de détails, à savoir l'url, la largueur et la hauteur
         if (has_post_thumbnail($object['id'])) {
+            $thumbnail_url = get_the_post_thumbnail_url($object['id']);
+
             $thumbnail_details = wp_get_attachment_image_src($object['featured_media']); // On récupère la clé "featured_media" 
+            
+            // var_dump($object);
+            // die();
 
             return [
-                "url"       => $thumbnail_details[0],
-                "width"     => $thumbnail_details[1],
-                "height"    => $thumbnail_details[2],
+                "url_media"             => $thumbnail_url,
+                "url_featured_media"    => $thumbnail_details[0],
+                "width"                 => $thumbnail_details[1],
+                "height"                => $thumbnail_details[2],
             ];
+
         } else {
             return false;
         }
+        
     }
-
+  
 }
